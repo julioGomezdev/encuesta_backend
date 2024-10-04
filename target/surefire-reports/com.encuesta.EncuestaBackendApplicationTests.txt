@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.encuesta.EncuestaBackendApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.956 s <<< FAILURE! - in com.encuesta.EncuestaBackendApplicationTests
+testAgregarEncuesta  Time elapsed: 0.256 s  <<< ERROR!
+org.springframework.dao.DuplicateKeyException: 
+PreparedStatementCallback; SQL [INSERT INTO ENCUESTA (EMAIL, ESTILO_MUSICAL) VALUES (?, ?)]; Violación de indice de Unicidad ó Clave primaria: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ENCUESTA(EMAIL) VALUES 1"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ENCUESTA(EMAIL) VALUES 1"; SQL statement:
+INSERT INTO ENCUESTA (EMAIL, ESTILO_MUSICAL) VALUES (?, ?) [23505-200]; nested exception is org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Violación de indice de Unicidad ó Clave primaria: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ENCUESTA(EMAIL) VALUES 1"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ENCUESTA(EMAIL) VALUES 1"; SQL statement:
+INSERT INTO ENCUESTA (EMAIL, ESTILO_MUSICAL) VALUES (?, ?) [23505-200]
+	at com.encuesta.EncuestaBackendApplicationTests.testAgregarEncuesta(EncuestaBackendApplicationTests.java:47)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: 
+Violación de indice de Unicidad ó Clave primaria: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ENCUESTA(EMAIL) VALUES 1"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ENCUESTA(EMAIL) VALUES 1"; SQL statement:
+INSERT INTO ENCUESTA (EMAIL, ESTILO_MUSICAL) VALUES (?, ?) [23505-200]
+	at com.encuesta.EncuestaBackendApplicationTests.testAgregarEncuesta(EncuestaBackendApplicationTests.java:47)
+
